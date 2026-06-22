@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy-900: #071b34;
+  --navy-800: #0b2545;
+  --navy-950: #08111f;
+  --gold: #d4af37;
+  --gold-soft: #e7cc74;
+  --ink: #1a1a1a;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Lenis is driving the scroll; let it own the position */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: var(--ink);
+  font-family: 'Manrope', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(212, 175, 55, 0.28);
+  color: var(--navy-900);
+}
+
+/* ---- Layout helpers ---- */
+.container-wide {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-wide {
+    padding-inline: 2.5rem;
+  }
+}
+
+/* ---- Typographic flourish ---- */
+.headline {
+  font-family: 'Sora', sans-serif;
+  letter-spacing: -0.045em;
+  line-height: 0.98;
+}
+.serif-accent {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 500;
+}
+.data {
+  font-family: 'JetBrains Mono', monospace;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* gold gradient text used very sparingly */
+.text-gold-gradient {
+  background: linear-gradient(180deg, #f2dd8f 0%, #d4af37 55%, #a9842a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---- Atmosphere: fine grain over dark sections ---- */
+.grain::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+}
+
+/* engineered hairline grid for the hero */
+.grid-lines {
+  background-image: linear-gradient(rgba(212, 175, 55, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 175, 55, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(ellipse 75% 60% at 70% 35%, #000 30%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 60% at 70% 35%, #000 30%, transparent 75%);
+}
+
+/* glass console card */
+.glass {
+  background: linear-gradient(155deg, rgba(15, 38, 70, 0.92), rgba(8, 17, 31, 0.92));
+  border: 1px solid rgba(212, 175, 55, 0.16);
+  backdrop-filter: blur(8px);
+}
+
+/* thin animated divider */
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+}
+
+/* focus visibility for keyboard users */
+:where(a, button, input, textarea, [tabindex]):focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* marquee */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* draw-on for SVG paths */
+.draw {
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .draw {
+    stroke-dashoffset: 0 !important;
+  }
+}
+
+/* ---- form inputs ---- */
+.ca-input {
+  width: 100%;
+  border-radius: 0.85rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(8, 17, 31, 0.5);
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  color: #fff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.ca-input::placeholder {
+  color: rgba(255, 255, 255, 0.32);
+}
+.ca-input:focus {
+  outline: none;
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+.ca-input option {
+  color: #0b2545;
+}
+
+/* floating action button */
+.fab {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 40;
+}
