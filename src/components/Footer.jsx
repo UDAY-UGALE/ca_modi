@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
             <a href="#top" className="flex items-center gap-2.5">
-              <img src="/ca-logo.jpeg" alt="CA India Logo" className="h-9 w-9 object-contain" />
+              <img src="/ca-logo.webp" alt="CA India Logo" className="h-9 w-9 object-contain" />
               <span className="text-sm font-semibold tracking-tight text-white">
                 A I Modi &amp; Co
               </span>

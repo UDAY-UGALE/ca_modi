@@ -31,7 +31,7 @@ function Intro({ done }) {
         transition={{ duration: 0.5, ease: 'easeOut' }}
         className="flex items-center gap-3"
       >
-        <img src="/ca-logo.jpeg" alt="CA India Logo" className="h-12 w-12 object-contain" />
+        <img src="/ca-logo.webp" alt="CA India Logo" className="h-12 w-12 object-contain" />
         <span className="headline text-2xl font-bold text-white">A I Modi &amp; Co</span>
       </motion.div>
     </motion.div>

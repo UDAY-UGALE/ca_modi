@@ -38,12 +38,12 @@ export default function Navbar() {
       >
         <a href="#top" className="flex items-center gap-2.5">
           <img
-            src="/ca-logo.jpeg"
+            src="/ca-logo.webp"
             alt="CA India Logo"
             className="h-9 w-9 object-contain"
           />
           <span className="leading-none">
-            <span className="block text-sm font-semibold tracking-tight text-white">
+            <span className="block text-base font-semibold tracking-tight text-white">
               A I Modi &amp; Co
             </span>
             <span className="block text-[0.6rem] uppercase tracking-[0.22em] text-gold-soft/80">

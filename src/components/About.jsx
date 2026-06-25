@@ -43,8 +43,10 @@ export default function About() {
         <Reveal delay={0.1}>
           <div className="relative flex justify-center lg:justify-end">
             <img
-              src="/office-image.png"
+              src="/office-image.webp"
               alt="A I Modi & Co Office"
+              loading="lazy"
+              decoding="async"
               className="w-full max-w-md rounded-[1.8rem] object-cover shadow-lift"
             />
           </div>

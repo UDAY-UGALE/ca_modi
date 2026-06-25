@@ -8,9 +8,8 @@ export const FIRM = {
   address:
     '105, 1st Floor, Modi Plaza, Laxminarayan Chowk, Pune-Satara Road, Swargate, Pune 411037',
   emails: ['info@aimodi.in', 'aimodiandco@gmail.com'],
-  // Update this number to enable real WhatsApp / call links.
-  phoneDisplay: '+91 00000 00000',
-  phoneE164: '+910000000000',
+  phoneDisplay: '+91 77099 44330',
+  phoneE164: '+917709944330',
 }
 
 export const SERVICES = [
