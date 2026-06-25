@@ -25,7 +25,7 @@ export default function Stats() {
       <div className="absolute -right-20 top-0 h-80 w-80 rounded-full bg-gold/5 blur-[120px]" />
 
       <div className="container-wide relative">
-        <div className="max-w-2xl">
+        {/* <div className="max-w-2xl">
           <Eyebrow dark>Why choose us</Eyebrow>
           <Reveal>
             <h2 className="headline mt-5 text-4xl font-bold text-white md:text-5xl">
@@ -36,7 +36,7 @@ export default function Stats() {
               that lets you sleep at night.
             </p>
           </Reveal>
-        </div>
+        </div> */}
 
         <div className="mt-16 grid grid-cols-2 gap-x-8 gap-y-12 md:grid-cols-4">
           {STATS.map((s) => (

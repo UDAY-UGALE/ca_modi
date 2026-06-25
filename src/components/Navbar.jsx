@@ -37,9 +37,11 @@ export default function Navbar() {
         style={{ width: 'calc(100% - 2rem)', marginInline: '1rem' }}
       >
         <a href="#top" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-gold text-navy-950">
-            <span className="serif-accent text-lg not-italic">A</span>
-          </span>
+          <img
+            src="/ca-logo.jpeg"
+            alt="CA India Logo"
+            className="h-9 w-9 object-contain"
+          />
           <span className="leading-none">
             <span className="block text-sm font-semibold tracking-tight text-white">
               A I Modi &amp; Co

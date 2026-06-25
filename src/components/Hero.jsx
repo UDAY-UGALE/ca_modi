@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion'
-import FinancialConsole from './FinancialConsole'
 import MagneticButton from './ui/MagneticButton'
 import { wordUp, stagger, EASE } from '../lib/variants'
 
@@ -17,10 +16,10 @@ export default function Hero() {
       <div className="absolute -top-40 right-0 h-[520px] w-[520px] rounded-full bg-navy-800/60 blur-[120px]" />
       <div className="absolute -bottom-40 -left-20 h-[420px] w-[420px] rounded-full bg-gold/5 blur-[120px]" />
 
-      <div className="container-wide relative grid items-center gap-14 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-wide relative flex items-center">
         {/* left: copy */}
-        <div>
-          <motion.div
+        <div className="max-w-2xl">
+          {/* <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: EASE }}
@@ -30,7 +29,7 @@ export default function Hero() {
             <span className="text-[0.72rem] font-medium tracking-tight text-gold-soft">
               Chartered Accountants · Pune
             </span>
-          </motion.div>
+          </motion.div> */}
 
           <h1 className="headline text-[2.7rem] font-extrabold text-white sm:text-6xl lg:text-[4.4rem]">
             <motion.span
@@ -102,7 +101,7 @@ export default function Hero() {
             </MagneticButton>
           </motion.div>
 
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1.2 }}
@@ -113,13 +112,9 @@ export default function Hero() {
             <Stat k="1000+" v="Returns filed" />
             <span className="h-8 w-px bg-white/10" />
             <Stat k="99%" v="Accuracy" />
-          </motion.div>
+          </motion.div> */}
         </div>
 
-        {/* right: console */}
-        <div className="flex justify-center lg:justify-end">
-          <FinancialConsole />
-        </div>
       </div>
     </section>
   )

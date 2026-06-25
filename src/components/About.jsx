@@ -39,48 +39,17 @@ export default function About() {
           </div>
         </Reveal>
 
-        {/* mini ledger panel */}
+        {/* right: office image */}
         <Reveal delay={0.1}>
-          <div className="relative">
-            <div className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-gold/10 to-transparent blur-2xl" />
-            <div className="grain relative overflow-hidden rounded-[1.8rem] bg-navy-900 p-7 shadow-lift">
-              <div className="absolute inset-0 grid-lines opacity-60" />
-              <div className="relative">
-                <div className="flex items-center justify-between">
-                  <p className="text-[0.7rem] uppercase tracking-[0.2em] text-white/40">
-                    Engagement summary
-                  </p>
-                  <span className="data text-[0.62rem] text-gold-soft">FY 2024–25</span>
-                </div>
-
-                <div className="mt-6 space-y-3.5">
-                  {[
-                    ['Books reconciled', '12 / 12 months', 'text-emerald-300'],
-                    ['GST returns', 'Filed on time', 'text-emerald-300'],
-                    ['Statutory audit', 'Signed off', 'text-emerald-300'],
-                    ['Tax planning', '₹ saved, year on year', 'text-gold-soft'],
-                  ].map(([k, v, c]) => (
-                    <div
-                      key={k}
-                      className="flex items-center justify-between border-b border-white/5 pb-3"
-                    >
-                      <span className="text-sm text-white/70">{k}</span>
-                      <span className={`data text-[0.78rem] ${c}`}>{v}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 rounded-2xl bg-gold/10 p-4">
-                  <p className="text-[0.72rem] text-gold-soft/80">Client outcome</p>
-                  <p className="mt-1 text-sm leading-snug text-white">
-                    Cleaner books, lower tax outgo, and a finance function the
-                    owner finally trusts.
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div className="relative flex justify-center lg:justify-end">
+            <img
+              src="/office-image.png"
+              alt="A I Modi & Co Office"
+              className="w-full max-w-md rounded-[1.8rem] object-cover shadow-lift"
+            />
           </div>
         </Reveal>
+
       </div>
     </section>
   )
