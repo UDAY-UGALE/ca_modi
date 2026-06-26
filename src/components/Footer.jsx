@@ -54,7 +54,7 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 text-xs text-white/35 sm:flex-row">
           <p>© {new Date().getFullYear()} A I Modi &amp; Co. All rights reserved.</p>
-          <p>Chartered Accountants · Pune, Maharashtra</p>
+          {/* <p>Chartered Accountants · Pune, Maharashtra</p> */}
         </div>
       </div>
     </footer>

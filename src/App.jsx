@@ -71,7 +71,7 @@ export default function App() {
 
       <main>
         <Hero />
-        <TrustBar />
+        {/* <TrustBar /> */}
         <About />
         <Services />
         {/* <Stats /> */}

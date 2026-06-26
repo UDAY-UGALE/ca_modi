@@ -29,7 +29,7 @@ export default function Navbar() {
       className="fixed inset-x-0 top-0 z-50"
     >
       <div
-        className={`mx-auto mt-3 flex max-w-wide items-center justify-between rounded-full px-5 py-3 transition-all duration-500 ${
+        className={`mx-auto mt-3 flex max-w-wide items-center justify-between rounded-full px-7 py-4 transition-all duration-500 ${
           scrolled
             ? 'border border-white/10 bg-navy-900/80 backdrop-blur-xl shadow-lift'
             : 'border border-transparent bg-transparent'
@@ -40,13 +40,13 @@ export default function Navbar() {
           <img
             src="/ca-logo.webp"
             alt="CA India Logo"
-            className="h-9 w-9 object-contain"
+            className="h-11 w-11 object-contain"
           />
           <span className="leading-none">
-            <span className="block text-base font-semibold tracking-tight text-white">
+            <span className="block text-lg font-semibold tracking-tight text-white">
               A I Modi &amp; Co
             </span>
-            <span className="block text-[0.6rem] uppercase tracking-[0.22em] text-gold-soft/80">
+            <span className="block text-[0.65rem] uppercase tracking-[0.22em] text-gold-soft/80">
               Chartered Accountants
             </span>
           </span>

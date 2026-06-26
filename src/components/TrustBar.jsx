@@ -34,7 +34,7 @@ export default function TrustBar() {
         </div>
       </div>
 
-      <div className="marquee relative mt-8 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]">
+      {/* <div className="marquee relative mt-8 overflow-hidden [mask-image:linear-gradient(90deg,transparent,#000_12%,#000_88%,transparent)]">
         <div className="marquee-track gap-12 pr-12">
           {[...CLIENTS, ...CLIENTS].map((c, i) => (
             <span
@@ -45,7 +45,7 @@ export default function TrustBar() {
             </span>
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   )
 }
