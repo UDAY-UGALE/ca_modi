@@ -26,6 +26,8 @@ export default function Hero() {
           src="/hero-bg.webp"
           alt=""
           aria-hidden
+          fetchpriority="high"
+          decoding="sync"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
       </picture>
@@ -72,7 +74,7 @@ export default function Hero() {
                 <motion.span
                   initial={{ y: '110%' }}
                   animate={{ y: '0%' }}
-                  transition={{ duration: 0.9, ease: EASE, delay: 0.6 }}
+                  transition={{ duration: 0.6, ease: EASE, delay: 0.3 }}
                   className="inline-block"
                 >
                   <span className="text-gold-gradient">Complete</span>{' '}
@@ -84,7 +86,7 @@ export default function Hero() {
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: EASE, delay: 0.8 }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.4 }}
               className="mt-7 max-w-lg text-base leading-relaxed text-white/70 md:text-lg"
             >
               Expert accounting, auditing, taxation and business advisory for
@@ -95,7 +97,7 @@ export default function Hero() {
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: EASE, delay: 0.95 }}
+              transition={{ duration: 0.6, ease: EASE, delay: 0.5 }}
               className="mt-9 flex flex-wrap items-center gap-4"
             >
               <MagneticButton href="#contact" variant="gold">

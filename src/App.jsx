@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, lazy, Suspense } from 'react'
 import { motion, AnimatePresence, useScroll, useSpring } from 'framer-motion'
 import useLenis from './lib/useLenis'
 import { FIRM } from './lib/content'
@@ -6,22 +6,23 @@ import { FIRM } from './lib/content'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import TrustBar from './components/TrustBar'
-import About from './components/About'
-import Services from './components/Services'
-import Stats from './components/Stats'
-import Industries from './components/Industries'
-import Process from './components/Process'
-import Testimonials from './components/Testimonials'
-import Insights from './components/Insights'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
+
+const About       = lazy(() => import('./components/About'))
+const Services    = lazy(() => import('./components/Services'))
+const Stats       = lazy(() => import('./components/Stats'))
+const Industries  = lazy(() => import('./components/Industries'))
+const Process     = lazy(() => import('./components/Process'))
+const Testimonials= lazy(() => import('./components/Testimonials'))
+const Insights    = lazy(() => import('./components/Insights'))
+const Contact     = lazy(() => import('./components/Contact'))
+const Footer      = lazy(() => import('./components/Footer'))
 
 function Intro({ done }) {
   return (
     <motion.div
       initial={{ y: 0 }}
       animate={{ y: '-100%' }}
-      transition={{ duration: 0.9, ease: [0.83, 0, 0.17, 1], delay: 0.5 }}
+      transition={{ duration: 0.5, ease: [0.83, 0, 0.17, 1], delay: 0.2 }}
       onAnimationComplete={done}
       className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-950"
     >
@@ -72,17 +73,21 @@ export default function App() {
       <main>
         <Hero />
         {/* <TrustBar /> */}
-        <About />
-        <Services />
-        {/* <Stats /> */}
-        <Industries />
-        <Process />
-        <Testimonials />
-        <Insights />
-        <Contact />
+        <Suspense fallback={null}>
+          <About />
+          <Services />
+          {/* <Stats /> */}
+          <Industries />
+          <Process />
+          <Testimonials />
+          <Insights />
+          <Contact />
+        </Suspense>
       </main>
 
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
 
       {/* WhatsApp FAB */}
       {introDone && (
