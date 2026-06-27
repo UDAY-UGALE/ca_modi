@@ -36,6 +36,9 @@ export default function Hero() {
       <div className="relative flex min-h-screen flex-col justify-between pt-36 pb-12">
         <div className="container-wide">
           <div className="max-w-2xl pr-4">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-widest text-gold-soft">
+              Chartered Accountants in Pune — A I Modi &amp; Co
+            </p>
             <h1 className="headline text-[2.7rem] font-extrabold text-white sm:text-6xl lg:text-[4.4rem]">
               <motion.span
                 variants={stagger(0.15, 0.09)}
